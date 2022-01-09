@@ -1,0 +1,28 @@
+package com.mycompany.miniproje_6;
+//ŞARTA BAĞLI BEDEN KİTLE ENDEKSİ BULMA
+//VÜCUT KİTLE ENDEKSİ: KİLO/BOY*BOY
+      import java.util.Scanner;
+public class Main {
+    public static void main(String[] args){
+       Scanner klavye=new Scanner(System.in);
+       System.out.println("Lütfen Boyunuzu giriniz:");
+       double boy=klavye.nextDouble();
+       System.out.println("Lütfen Kilonuzu giriniz:");
+       double kilo=klavye.nextDouble();
+       double vucutkitleendeksi=kilo/(boy*boy);
+       if(vucutkitleendeksi<=18.5){
+           System.out.println("Zayıfsınız.");
+       }
+       else if(vucutkitleendeksi<=25){
+           System.out.println("Normalsiniz");
+       }
+       else if(vucutkitleendeksi<=30){
+           System.out.println("Kilolusunuz");
+       }
+       else{
+           System.out.println("Obezsiniz");
+       }
+       System.out.println("Vücut Kitle Endeksiniz:" +vucutkitleendeksi);
+    }
+    
+  }
