@@ -1,0 +1,53 @@
+package com.mycompany.miniproje_8_gelismisnothesaplama;
+
+import java.util.Scanner;
+  
+//DIŞARIDAN GİRİLEN VİZE1,VİZE2 VE FİNAL NOTLARIYLA ORTALAMA HESAPLAYIP ŞARTA BAĞLI HANGİ DERECE İLE GEÇTİĞİMİZİ KALDIĞIMIZI GÖSTEREN PROGRAM
+
+public class Main {
+    public static void main(String[] args){
+        Scanner klavye=new Scanner(System.in);
+        System.out.println("Lütfen Vize1 notunu girin:");
+        double vize1=klavye.nextDouble();
+        System.out.println("Lütfen Vize2 notunu girin:");
+        double vize2=klavye.nextDouble();
+        System.out.println("Lütfen Final notunu girin:");
+        double finalnot=klavye.nextDouble();
+        
+        double ortalama=(vize1*30/100)+(vize2*30/100)+(finalnot*40/100);
+        System.out.println("Ders Ortalamanız:" + ortalama);
+        if(ortalama>=90){
+            System.out.println("AA ile geçtiniz.Tebrikler!");
+        }
+        else if(ortalama>=85){
+            System.out.println("BA ile geçtiniz.Tebrikler");
+        }
+        else if(ortalama>=80){
+            System.out.println("BB ile geçtiniz.Tebrikler");
+        }
+        else if(ortalama>=75){
+            System.out.println("CB ile geçtiniz.Tebrikler");
+        }
+        else if(ortalama>=70){
+            System.out.println("CC ile geçtiniz.Tebrikler");
+        }
+        else if(ortalama>=65){
+            System.out.println("DC ile geçtiniz.Tebrikler");
+        }
+        else if(ortalama>=60){
+            System.out.println("DD ile geçtiniz.Tebrikler");
+        }
+        else{
+            System.out.println("Maalesef dersten geçemediniz.Lütfen daha çok çalışın!");
+        }
+        System.out.println("Genel Okul Ortalamanız Nedir?"+" "+  "0 ile 5 arasında giriniz.(Örnek:2.30)");
+        double genelortalama=klavye.nextDouble();
+        if(genelortalama <=2.50){
+            System.out.println("SENDEN ADAM OLMAAAAAZZZZZ!!!!");
+        }
+        
+    }
+    
+    
+    
+}
