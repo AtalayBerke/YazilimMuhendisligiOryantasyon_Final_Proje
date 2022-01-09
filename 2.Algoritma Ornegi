@@ -1,0 +1,20 @@
+package com.mycompany.akis_semalari_soru_4;
+
+import java.util.Scanner;
+// 35 kişinin maaşının toplandığı program(Maaş elden giriliyor)
+public class Soru_4 {
+    public static void main(String[] args) {
+       
+       Scanner klavye=new Scanner(System.in); //maaşı elden giriceğimiz için scanner tanımlıyoruz.
+       int TM=0; //toplam maaş başlangıçta 0
+       System.out.println("Lütfen Maaşı Giriniz");
+       int maas=klavye.nextInt();
+       for(int s= 1;s<36;s++){
+       TM=TM+maas;
+       System.out.println(s+"kişinin maaş toplamı:"+""+TM);
+          
+       }
+       
+    }
+    
+}
