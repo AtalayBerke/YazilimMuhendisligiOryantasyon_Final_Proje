@@ -1,0 +1,19 @@
+//7
+package com.mycompany.miniproje_1;
+
+import java.util.Scanner;
+        
+public class Vucut_Kitle_Endeks_Hesaplama {
+ public static void main(String [] args){
+     //VÜCUT KİTLE ENDEKİ HESAPLAYAN PROGRAM
+   Scanner klavye=new Scanner(System.in);
+   
+     System.out.println("Lütfen Boyunuzu girin:");
+     double boy=klavye.nextDouble();
+     System.out.println("Lütfen Kilonuzu Girin");
+     int kilo=klavye.nextInt();
+     double endeks=kilo/(boy*boy);
+      System.out.println("Vücut Kitle Endeksiniz:" +endeks);
+ }
+     
+ }
