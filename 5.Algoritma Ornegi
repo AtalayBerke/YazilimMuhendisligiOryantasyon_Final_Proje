@@ -1,27 +1,29 @@
-package com.mycompany.akis_semalari_soru_6;
-      import java.util.Scanner;
-// Adım sayısını ve cinsiyeti dışardan parametre olarak alıp,yakılan kalori miktarını ekrana yazan program
-// adım uzunluğu erkek=45cm,kadın=30cm
-// kalori hesaplama=(adimsayısı*adım uzunluğu)/500
-public class Soru_6 {
+package com.mycompany.akis_semalari_soru_7;
+
+        import java.util.Scanner;
+//MEVSİME BAĞLI MAKİNELERİN ÇALIŞMA SÜRESİ
+public class Main {
     public static void main(String[] args){
-        double kadinadimuzunlugu=0.30;
-        double erkekadimuzunlugu=0.45;
         Scanner klavye=new Scanner(System.in);
-        System.out.println("Lütfen Cinsiyeti Giriniz:");
-        String cinsiyet=klavye.nextLine();
-        System.out.println("Günlük Adım Sayısı:");
-        int adim_sayisi=klavye.nextInt();        
-        double kalori;
-        if(cinsiyet=="kadin"){
-         kalori=(adim_sayisi*kadinadimuzunlugu/500);
+        System.out.println("Lütfen Makine Sayısını giriniz:");
+        int makinesayisi=klavye.nextInt();
+        System.out.println("Lütfen Ay Sayısını giriniz:");
+        int ay=klavye.nextInt();
+        int sure,aralik;
+        if(ay>2 && ay<9){
+          sure=480;
+          aralik=45;
         }
         else{
-           
-            kalori=(adim_sayisi*erkekadimuzunlugu/500);
+            sure=540;
+            aralik=30;
         }
-        System.out.println("Toplam yakılan günlük kalori miktarı="+kalori);
-       
-      
+        for(int i=makinesayisi;i>0;i--){
+            
+            System.out.println(i +".Makinenin çalışma süresi=" +sure);
+            sure=sure-aralik;
+        }
+        
     }
+    
 }
