@@ -1,0 +1,27 @@
+package com.mycompany.akis_semalari_soru_6;
+      import java.util.Scanner;
+// Adım sayısını ve cinsiyeti dışardan parametre olarak alıp,yakılan kalori miktarını ekrana yazan program
+// adım uzunluğu erkek=45cm,kadın=30cm
+// kalori hesaplama=(adimsayısı*adım uzunluğu)/500
+public class Soru_6 {
+    public static void main(String[] args){
+        double kadinadimuzunlugu=0.30;
+        double erkekadimuzunlugu=0.45;
+        Scanner klavye=new Scanner(System.in);
+        System.out.println("Lütfen Cinsiyeti Giriniz:");
+        String cinsiyet=klavye.nextLine();
+        System.out.println("Günlük Adım Sayısı:");
+        int adim_sayisi=klavye.nextInt();        
+        double kalori;
+        if(cinsiyet=="kadin"){
+         kalori=(adim_sayisi*kadinadimuzunlugu/500);
+        }
+        else{
+           
+            kalori=(adim_sayisi*erkekadimuzunlugu/500);
+        }
+        System.out.println("Toplam yakılan günlük kalori miktarı="+kalori);
+       
+      
+    }
+}
