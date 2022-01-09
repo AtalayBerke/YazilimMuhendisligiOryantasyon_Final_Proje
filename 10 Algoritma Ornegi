@@ -1,0 +1,22 @@
+package com.mycompany.akis_semalari_soru_2;
+
+import java.util.Scanner; //Scanner kütüphanesini oluşturuyoruz.
+
+//sicil numarası,çalışma saati ve saatlik ücreti dışarıdan girilen bir çalışanın net maaşını hesaplayan program.
+public class Soru {
+    public static void main(String[] args){ //main bloğu bizim kodları çalıştırmamız için gerekli olan ana kısım.
+        Scanner klavye=new Scanner(System.in); //scanner kütüphanesinden bir adet obje üretiyoruz.
+        System.out.println("Sicil No Girin:"); //Kullanıcıdan giriş almak istediğimiz için sout kullanmamız en doğrusu olur.
+        String Sicil_Numarası=klavye.nextLine(); // Değişken tipine bağlı olarak scanner objesine bağlıyoruz.
+        System.out.println("Çalışma Saatini Girin:");
+        int Calisma_Saati=klavye.nextInt();
+        System.out.println("Saatlik Ücreti Girin:");
+        int Saatlik_Ucret=klavye.nextInt();
+        
+        double brutmaas=26*(Calisma_Saati*Saatlik_Ucret);
+        double prim=(brutmaas*0.14);
+        double vergi=(brutmaas*0.15);
+        double netmaas= brutmaas-(vergi+prim);
+           System.out.println("Bu Çalışanın Sicil Numarası="+" "+Sicil_Numarası+"Primi:"+" "+prim+" "+"Vergisi:"+" "+vergi+" "+"Net Maaşı:"+" "+netmaas+" TL"); 
+ }   
+}
