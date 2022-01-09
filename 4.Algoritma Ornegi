@@ -1,0 +1,26 @@
+package com.mycompany.akis_semasi_soru_3;
+        
+
+import java.util.Objects;
+import java.util.Scanner;
+
+//DIŞARIDAN GİRİLEN 2 SAYININ HANGİSİNİN BÜYÜK HANGİSİNİN KÜÇÜK OLDUĞUNU GÖSTEREN PROGRAM
+public class Soru {
+   public static void main(String [] args){
+       Scanner klavye=new Scanner(System.in);
+       System.out.println("A sayısını girin:");
+       double Sayi_1=klavye.nextDouble();
+       System.out.println("B sayısını girin:");
+       double Sayi_2=klavye.nextDouble();
+       if(Objects.equals(Sayi_1,Sayi_2)){
+           System.out.println("A sayısı B sayısına eşittir");
+       }
+       else if(Sayi_1> Sayi_2){
+           System.out.println("A sayısı B sayısından büyüktür");
+       }
+       else{
+           System.out.println("B sayısı A sayısından büyüktür");
+       }
+           {
+       {         
+}
