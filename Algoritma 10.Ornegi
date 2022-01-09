@@ -1,0 +1,62 @@
+package com.mycompany.miniproje_7;
+       import java.util.Scanner;
+
+//*****Switch Case ile 4 işlem yapan hesap makinesi******
+public class Main {
+    public static void main(String[] args){
+        Scanner klavye=new Scanner(System.in);
+       System.out.println("**********************************************");
+       String islemler="1.Toplama İşlemi\n"+
+                       "2.Çıkarma İşlemi\n"+
+                       "3.Çarpma İşlemi\n"+
+                       "4.Bölme İşlemi";
+       System.out.println(islemler);
+       System.out.println("**********************************************");
+       int a;
+       int b;
+       int c;
+       double d;
+       
+       System.out.println("Lütfen yapmak istediğiniz işlemi seçin:");
+       String islem=klavye.nextLine();
+       
+       switch(islem){
+           case "1":
+               System.out.println("Lütfen a sayısını giriniz:");
+                a=klavye.nextInt();
+               System.out.println("Lütfen b sayısını giriniz:");
+                b=klavye.nextInt();
+                c=a+b;
+               System.out.println("Sonuç:" +c);
+               break;
+           case "2":
+               System.out.println("Lütfen a sayısını giriniz:");
+               a =klavye.nextInt();
+               System.out.println("Lütfen b sayısını giriniz:");
+               b=klavye.nextInt();
+               c=a-b;
+               System.out.println("Sonuç:" +c);
+               break;
+           case "3":
+               System.out.println("Lütfen a sayısını giriniz:");
+               a =klavye.nextInt();
+               System.out.println("Lütfen b sayısını giriniz:");
+               b=klavye.nextInt();
+               c=a*b;
+               System.out.println("Sonuç:" +c);
+               break;
+           case "4":
+               System.out.println("Lütfen a sayısını giriniz:");
+               a =klavye.nextInt();
+               System.out.println("Lütfen b sayısını giriniz:");
+               b=klavye.nextInt();
+               d=a/b;
+               System.out.println("Sonuç:" +d);
+               break;
+               
+           default:
+           System.out.println("Lütfen geçerli bir işlem giriniz!");
+           break;             
+       }
+    }
+}
